@@ -45,14 +45,16 @@ class StickerScrollComponent extends ScrollComponent
 			section.header.y = 0
 			
 			sectionScreenFrame = section.screenFrame
-			return section if sectionScreenFrame.y < 0 && (sectionScreenFrame.y + sectionScreenFrame.height) > 0
+			contentY = (sectionScreenFrame.y - @.y)
+			return section if contentY < 0 && (contentY + sectionScreenFrame.height) > 0
 		return first
 		
 	layout:() ->
 		return if @.content.children.count == 0
 		section = @.topChild()
 		# Shift the header based on how much it's offset
-		section.header.y = Math.max(Math.min(-section.screenFrame.y, section.height - section.header.height), 0)
+		contentY = (section.screenFrame.y - @.y)		
+		section.header.y = Math.max(Math.min(-contentY, section.height - section.header.height), 0)
 
 module.exports = {
 	StickerScrollComponent: StickerScrollComponent,
