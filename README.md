@@ -2,7 +2,7 @@
 The **Sticker** module provides sticky header functionality for a ScrollComponent 
 
 ## Example
-http://share.framerjs.com/6eihyxb7cidu/
+http://share.framerjs.com/jb6konqkbxwa/
 
 ## Including the Module
 Place the sticker.coffee module into the `/modules` directory of your project. Then require the module at the top of your prototype.
@@ -26,7 +26,7 @@ sticker = new StickerScrollComponent
 # Add sections
 for [0..15] 
 	section = new StickerSection	
-		header:  new Layer(height: 75, backgroundColor: Utils.randomColor())	
+		header:  new Layer(height: 75,  width: tv.width,  backgroundColor: Utils.randomColor())	
 		content: new Layer(height: 300, width: tv.width,  backgroundColor: "#e3e3e3")
 		parent: sticker.content 
 ```
