@@ -21,13 +21,13 @@ A `StickerSection` takes `content` and `header` options that are the layers you 
 
 ```javascript
 # Create the sticky headers component
-tv = new StickerScrollComponent
+sticker = new StickerScrollComponent
 
 # Add sections
 for i in [0..15] 
 	section = new StickerSection	
 		header:  new Layer(height: 75, backgroundColor: Utils.randomColor())	
 		content: new Layer(height: 300, width: tv.width,  backgroundColor: "#e3e3e3")
-		parent: tv.content 
+		parent: sticker.content 
 ```
 		
