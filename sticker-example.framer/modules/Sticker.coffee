@@ -16,8 +16,6 @@ class StickerSection extends Layer
 		@.layout()
 	layout:() ->
 		@.content.y = @.header.height
-		@.content.centerX()
-		@.header.width  = @.width
 	totalHeight:() ->
 		return @.content.height + @.header.height
 

@@ -35,6 +35,7 @@ for image, i in images
 	# Make a header
 	header = new Layer
 		height: 116
+		width: Screen.width
 		backgroundColor: "rgba(255,255,255,0.70)"
 		html: '<p class="header">' + image[1] + '</p>'
 		style: {'-webkit-backdrop-filter': 'blur(30px)'} 
